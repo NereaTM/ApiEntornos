@@ -17,6 +17,9 @@ app.use('/empleados', empleadosRutas);
 app.use('/usuarios', usuariosRutas);
 app.use('/login', loginRutas); 
 
+// Sirve la carpeta public
+app.use(express.static(path.join(__dirname, 'web')));
+
 // Configuracion en el puerto 3000
 app.listen(3000, () => {
   console.log('Servidor corriendo en http://localhost:3000');
