@@ -6,6 +6,7 @@ const path = require('path');
 const departamentosRutas = require('./rutas/departamentos');
 const empleadosRutas = require('./rutas/empleados');
 const usuariosRutas = require('./rutas/usuarios');
+const loginRutas = require('./rutas/login'); 
 
 // Predefinir en json
 app.use(express.json()); 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use('/departamentos', departamentosRutas);
 app.use('/empleados', empleadosRutas);
 app.use('/usuarios', usuariosRutas);
+app.use('/login', loginRutas); 
 
 // Configuracion en el puerto 3000
 app.listen(3000, () => {
